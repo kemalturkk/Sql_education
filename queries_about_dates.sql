@@ -23,3 +23,7 @@ SELECT DateFirstPurchase
   YEAR(OrderDate) = '2012' 
   and
   Month(OrderDate) between '6' and '8'
+---------------------------------------------------
+select *
+  from [dbo].[FactInternetSales] where
+  DATEDIFF(DAY, OrderDate, ShipDate) > 3
